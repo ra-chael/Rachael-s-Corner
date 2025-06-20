@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>⋆ Rachael's Corner ⋆</title> <!--all special character icons were obtained from emojicombos.com; see README for more info-->
+        <link rel="icon" href="images/favicon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="grid-container">
+        <header>
+            <h1 id="title-box" class="title-font" onclick="clickHeader()">⋆ Rachael's Corner ⋆</h1>
+        </header>
+        <nav id="nav-box" class="content-box">
+            <h2>Explore</h2>
+            <div class="inner-content-box">
+                <a href="index.html">❤︎ Home</a>
+                <a href="about-me.html">❤︎ About Me</a>
+                <a href="art.html">❤︎ Art</a>
+                <a href="games.html">❤︎ Games</a>
+                <a href="blog.html">❤︎ Blog</a>
+                <a href="contact.html">❤︎ Contact</a>
+            </div>
+        </nav>
+        <main id="main-box" class="content-box">
+            <h2>Art</h2>
+            <div class="inner-content-box" id="gallery">
+                <img class="media" src="images/pixel-art.jpg" alt="pixelated art of a brown-haired girl wearing a blue and yellow striped shirt" height="315">
+                <img class="media" src="images/portrait.jpg" alt="traditional + digital drawing of the side profile of a curly-haired woman" height="315">
+                <img class="media" src="images/3d-girl.png" alt="stylized 3d model of a smiling brown-haired girl with a blue dress" height="315">
+                <video class="media" controls width="177" height = "315">
+                    <source src="videos/drawing-tutorial.mp4">
+                </video>
+                <iframe class="media" width="560" height="315" src="https://www.youtube.com/embed/htm-Yj7XeFA?si=1tFt1_x50z5Q6r6V" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <br>
+                <section>
+                    <div class="toggleButtons" onclick="colorButton1()">
+                    <p>Click me for a toybox theme!</p>
+                    </div>
+                    <div class="toggleButtons" onclick="colorButton2()">
+                    <p>Click me for a marshmallow theme!</p>
+                    </div>
+                    <p>(reload the page to reset to the default melon theme!)</p>
+                </section>
+            </div>
+        </main>
+    </body>
+    <footer id="footer-box" class="content-box">
+        <p><em>Made with ♡ by Rachael Eruokwu</em></p>
+    </footer>
+    <script src="script.js"></script>
+</html>

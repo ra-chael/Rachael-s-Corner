@@ -1,0 +1,251 @@
+/*fonts*/
+@font-face { /*implemented with help from W3Schools*/
+    font-family: Shrikhand;
+    src: url("fonts/Shrikhand/Shrikhand-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: DMSans;
+    src: url("fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf") format("truetype");
+}
+
+body { /*code mainly from https://fonts.google.com/specimen/DM+Sans; see README for more details*/
+    font-family: DMSans, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.title-font { /*code mainly from https://fonts.google.com/specimen/Shrikhand; see README for more details*/
+    font-family: Shrikhand, serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: normal;
+    text-align: center;
+    color: #FA7089;
+}
+
+
+
+/*main grid structure*/
+body {
+    margin: 2;
+    height: 100vh;
+    max-width: 100%;
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    background-color: #C4D18B;
+    grid-area: sidebar;
+}
+
+main {
+    background-color: #FFD394;
+    grid-area: main;
+}
+
+footer {
+    background-color: #FF9CA8;
+    grid-area: footer;
+}
+
+
+
+/*outer & inner container styling*/
+.content-box {
+    border: 5px solid white;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+nav > h2, main > h2 { /*combination of child and multiple selectors*/
+    grid-area: title;
+    flex: 5%;
+}
+
+.inner-content-box {
+    border: 5px solid FFF5D1;
+    padding: 15px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #FFF5D1;
+    grid-area: inner-content;
+    flex: 95%;
+    overflow: auto; /*overflow property implemented with help from W3Schools*/
+}
+
+.toggleButtons {
+    border: 1px solid white;
+    padding: 0px;
+    margin: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: bold;
+    background-color: white;
+}
+
+/*sidebar styling*/
+nav a {
+    color: #FA7089;
+    border: 2px solid #FA7089;
+    border-radius: 10px; /*to round the edges slightly*/
+    text-align: left;
+    padding: 5px;
+    margin: 5px;
+    text-decoration: none; /*to remove the underline from the links*/
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+}
+
+/*"about me" page styling using grid*/
+#section1 {
+    grid-area: text;
+}
+
+#section2 {
+    grid-area: image;
+}
+
+#section3 {
+    grid-area: lists;
+    text-align: left;
+}
+
+#inner-grid-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1.3fr;
+    grid-template-rows: 1fr 8fr;
+    grid-template-areas:
+      "text text"
+      "image lists";
+}
+
+ol ul > li { /*a combination of descendant and child selectors to target a specific type of list*/
+    font-style: italic;
+    color: #eb4d6a;
+}
+
+p ~ ul > li { /*a combination of sibling and child selectors to target a specific type of list*/
+    font-style: italic;
+    color: #209b91;
+}
+
+
+
+/*"art gallery" page styling using flex*/
+#gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.media {
+    margin: 8px; /*to separate images on all sides*/
+}
+
+
+
+/*extra styles*/
+*.framed-images {
+    border: 5px dashed #C4D18B;
+    padding: 5px;
+    margin: 5px;
+}
+
+a:hover {
+    background-color: #FFD394;
+    font-style: italic;
+}
+
+table, th, td, caption {
+    margin: auto;
+    padding: 8px;
+    border: 1px solid black;
+    border-collapse: collapse; /*with help from W3Schools*/
+    background-color: #d9f4f7;
+}
+
+caption {
+    font-size: 20px;
+}
+
+h3 + img {
+    border: 8px double #209b91;;
+}
+
+p::first-letter {
+    font-size: 20px;
+}
+
+[title~="YouTube"] {
+ border: 2px solid #DC143C;
+ padding: 2px;
+}
+
+
+
+/*dynamic serving*/
+/*mobile*/
+@media (max-width: 600px) {
+    #grid-container {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: auto;
+        grid-template-rows: 1fr 1fr auto 1fr;
+        grid-template-areas:
+          "header"
+          "sidebar"
+          "main"
+          "footer";
+    }
+
+    nav div {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+    /*NOTE TO SELF: come back and resize images & other media for each breakpoint*/
+}
+  
+/*tablet*/
+@media (min-width: 601px) {
+    #grid-container {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 4fr auto 1fr;
+        grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer footer";
+    }
+}
+
+/*web*/
+@media (min-width: 901px) {
+    #grid-container {
+        display: grid;
+        grid-gap: 5px;
+        grid-template-columns: 1fr 4fr;
+        grid-template-rows: 1fr 8fr 1fr;
+        grid-template-areas:
+          "header header"
+          "sidebar main"
+          "footer main";
+          height: 100vh;
+    }
+}

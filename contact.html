@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>⋆ Rachael's Corner ⋆</title> <!--all special character icons were obtained from emojicombos.com; see README for more info-->
+        <link rel="icon" href="images/favicon.png">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body id="grid-container">
+        <header>
+            <h1 id="title-box" class="title-font" onclick="clickHeader()">⋆ Rachael's Corner ⋆</h1>
+        </header>
+        <nav id="nav-box" class="content-box">
+            <h2>Explore</h2>
+            <div class="inner-content-box">
+                <a href="index.html">❤︎ Home</a>
+                <a href="about-me.html">❤︎ About Me</a>
+                <a href="art.html">❤︎ Art</a>
+                <a href="games.html">❤︎ Games</a>
+                <a href="blog.html">❤︎ Blog</a>
+                <a href="contact.html">❤︎ Contact</a>
+            </div>
+        </nav>
+        <main id="main-box" class="content-box">
+            <h2>Contact</h2>
+            <div class="inner-content-box">
+                <table>
+                    <caption>Here's where you can find me online:</caption>
+                    <tr>
+                        <th>Platform</th>
+                        <th>Name/Username</th>
+                        <th>Link</th>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>Cedar Plum</td>
+                        <td><a href="mailto:cedar.plum@gmail.com">mailto:cedar.plum@gmail.com</a></td>
+                    </tr>
+                    <tr>
+                        <td>Instagram</td>
+                        <td>@cedar.plum</td>
+                        <td><a href="https://www.instagram.com/cedar.plum/">https://www.instagram.com/cedar.plum/</a></td>
+                    </tr>
+                    <tr>
+                        <td>Youtube</td>
+                        <td>Cedar Plum</td>
+                        <td><a href="https://www.youtube.com/@cedarplum">https://www.youtube.com/@cedarplum</a></td>
+                    </tr>
+                </table>
+                <br>
+                <h2>Become a member today!</h2>
+                <h3>Join my email list and get cool gifts (not spam or malware I promise) delivered right to your inbox.</h3>
+                <form id="user-form" method="POST" action="#">
+                    <p>* = required</p> <!-- so the user can decide which inputs they want to fill in -->
+                    <label for="first">First name*</label>
+                    <input type="text" id="first" name="first" placeholder="Ada"><br>
+                    <label for="last">Last name*</label>
+                    <input type="text" id="last" name="last" placeholder="Lovelace"><br>
+                    <label for="nickname">Nickname*</label>
+                    <input type="text" id="nickname" name="nickname" placeholder="Twinkle Toes"><br>
+                    <label for="phone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="(555)555-5555"><br>
+                    <label for="email">Email address (Gmail only)*</label>
+                    <input type="text" id="email" name="email" placeholder="ily@gmail.com">
+                    <p><em>I would like to receive... (select all that apply)</em></p>
+                        <input type="checkbox" id="option1" name="calendars">
+                        <label for="option1"> monthly art calendars</label><br>
+                        <input type="checkbox" id="option2" name="memes">
+                        <label for="option2"> "meme-of-the-day"s</label><br>
+                        <input type="checkbox" id="option3" name="promos">
+                        <label for="option3"> promos and coupons for the online shop</label><br>
+                    <p><em>Any thoughts on the website? I'd love to hear from you!</em></p>
+                    <textarea id="feedback" name="feedback" rows="5" cols="50"></textarea>
+                    <br>
+                    <div id="user-message"></div>
+                    <input id="submit-button" type="submit" value="Submit!">
+                </form>
+                
+                <br>
+                <div class="toggleButtons" onclick="colorButton1()">
+                  <p>Click me for a toybox theme!</p>
+                </div>
+                <div class="toggleButtons" onclick="colorButton2()">
+                  <p>Click me for a marshmallow theme!</p>
+                </div>
+                <p>(reload the page to reset to the default melon theme!)</p>
+            </div>
+        </main>
+    </body>
+    <footer id="footer-box" class="content-box">
+        <p><em>Made with ♡ by Rachael Eruokwu</em></p>
+    </footer>
+    <script src="script.js"></script>
+</html>
